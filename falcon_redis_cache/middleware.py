@@ -15,8 +15,8 @@ class HttpMethods(object):
 
 class RedisCacheMiddleware(object):
 
-    def __init__(self, redis_host, redis_port, redis_db=0, auth=None):
-        self.client = redis.StrictRedis(redis_host, redis_port, redis_db)
+    def __init__(self, redis_host, redis_port, redis_db=0, password=None):
+        self.client = redis.StrictRedis(redis_host, redis_port, redis_db, password)
 
     def process_resource(self, req, resp, resource, params):
         """Provide redis cache with every request."""

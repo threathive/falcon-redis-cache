@@ -62,7 +62,7 @@ class MyResource(CacheCompaitableResource):
 
 ```
 
-You may serve directly from cache without having Falcon hit responders by using the `from_cahe` hook:
+You may serve directly from cache without having Falcon hit responders by using the `from_cache` hook:
 
 ```python
 from falcon_redis_cache.hooks import CacheProvider
